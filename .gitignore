@@ -1,1 +1,3 @@
-/l_1_variables_int_and_float.ipynb
+.idea/
+.venv/
+*.ipynb
