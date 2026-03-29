@@ -19,28 +19,37 @@
 
 # print(find_gcd(7,11))   
 
+# Задача. Перевернути Слова у Рядку
+
 # sentence = "    Hello my friend"
 # def reverse_words(sentence):
-#     index =  (sentence.strip().index(" "))
+#     """
+#     Напишіть функцію reverse_words, 
+#     яка приймає рядок та повертає його, де кожне слово перевернуто, а порядок слів збережено.
+#     """
+#     reversed_sentence = " ".join(map(lambda word: word[::-1],sentence.strip().split(" ")))
+#     print(reversed_sentence)
     
      
-#     return ("".join((sentence[:sentence.find(" ")])[::-1]),sentence.find)
+# #     return (" ".join((sentence[:sentence.find(" ")])[::-1]),sentence.find)
 
-# print(reverse_words(sentence))
-
-
-#Additional 3
+# reverse_words(sentence)
 
 
+# Additional 3
 
-number = "123"
+# ﻿Напишіть функцію sum_of_digits, яка приймає ціле число та повертає суму його цифр.
+
+number = -9876
 
 
 def sum_of_digits(number):
        result = 0
        number = str(number)
-       for digit  in number: 
-              result = result + int(digit)   
+       number_list =list(map(lambda digit: int(digit), list(digit for digit in number if str.isnumeric(digit) )))
+       for digit  in number_list:
+              result = result + digit 
+
        return result
 print(sum_of_digits(number)) 
 
