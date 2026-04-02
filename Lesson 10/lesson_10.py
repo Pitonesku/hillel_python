@@ -1,17 +1,17 @@
-# def additional_logic(func):
-#     def wrapper():
-#         print("Some logic 1")
-#         func()
-#         print("Some logic 2")
-#     return wrapper
-#
-#
-# @additional_logic
-# def hello():
-#     print("Hello World!")
-#
-#
-# hello()
+def additional_logic(func):
+    def wrapper():
+        print("Some logic 1")
+        func()
+        print("Some logic 2")
+    return wrapper
+
+
+@additional_logic
+def hello():
+    print("Hello World!")
+
+
+hello()
 
 ####
 # def check_permissions(func):

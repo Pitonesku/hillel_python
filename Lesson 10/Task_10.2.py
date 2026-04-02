@@ -9,21 +9,31 @@
 # Вхідні параметри: Рядок.
 # Вихідні параметри: Рядок.
 
-import string
+#VERSION 1
+import re
 
 def first_word(text: str) -> str:
-    """
-    Find first word in the text
-    """
-    text = (text.strip().split((" ")))
-    print(text)
+    patern = r"\w+'*\w*"
+    words = (re.findall(patern, text))
+    return words[0]
+   
 
-    for word in text:
-        if any(char.isalpha() for char in word):
-            first_word = word
-            break
-    first_word = "".join(filter(lambda char: char.isalpha() or char == "'" or char not in string.punctuation, first_word))
-    return first_word
+
+# import string
+
+# def first_word(text: str) -> str:
+#     """
+#     Find first word in the text
+#     """
+#     text = (text.strip().split((" ")))
+#     print(text)
+
+#     for word in text:
+#         if any(char.isalpha() for char in word):
+#             first_word = word
+#             break
+#     first_word = "".join(filter(lambda char: char.isalpha() or char == "'" or char not in string.punctuation, first_word))
+#     return first_word
 
 
 assert first_word("Hello world") == "Hello", 'Test1'
