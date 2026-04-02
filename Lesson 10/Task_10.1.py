@@ -22,11 +22,6 @@ def my_generator(start: int, qty: int, func):
         i+=1
         yield result
 
-my_gen = my_generator(2,5,pow)
-
-for i in my_gen:
-    print(i)
-
 
 gen = my_generator(2, 4, pow)
 assert isgenerator(gen) == True, 'Test1'
